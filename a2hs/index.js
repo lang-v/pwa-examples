@@ -23,7 +23,9 @@ if ('serviceWorker' in navigator) {
 
 let deferredPrompt;
 const addBtn = document.querySelector('.add-button');
-
+function AddToDesktop() {
+  deferredPrompt.prompt();
+}
 window.addEventListener('beforeinstallprompt', (e) => {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
   e.preventDefault();
@@ -48,3 +50,5 @@ window.addEventListener('beforeinstallprompt', (e) => {
     });
   });
 });
+
+
